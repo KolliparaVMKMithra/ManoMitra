@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test page</title>
+    <link rel="stylesheet" href="test.css" />
+
+    <script src="test.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-logo">Mano Mitra</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Survey</a></li>
+        <li><a href="chat.html">Virtual Assistant</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h2 id="welcomeMessage"></h2>
+
+      <div class="feature-box">
+        <img src="survey.jpg" alt="Survey" />
+        <div class="feature-content">
+          <h3>Take a Survey</h3>
+          <p>
+            Assess your mental well-being and get personalized tips for
+            mindfulness and calmness.
+          </p>
+          <button onclick="alert('Opening Survey Page')">
+            <a href="survey.html" style="text-decoration: none; color: #fff"
+              >Take Survey</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <img src="assistant.jpeg" alt="Virtual Assistant" />
+        <div class="feature-content">
+          <h3>Talk to Virtual Assistant</h3>
+          <p>
+            Get friendly guidance and emotional support through an interactive
+            assistant.
+          </p>
+          <button onclick="alert('Opening Virtual Assistant')">
+            <a href="chat.html" style="text-decoration: none; color: #fff"
+              >Talk Now
+            </a>
+          </button>
+        </div>
+      </div>
+
+      <div class="desp-box">
+        <img src="quote.png" alt="Quotes" />
+        <div class="desp-content">
+          <h3>Daily Motivation</h3>
+          <p id="quote-text">"Your limitation—it's only your imagination."</p>
+          <button id="refresh-btn">Refresh Quote</button>
+        </div>
+      </div>
+
+      <script>
+        const quotes = [
+          "Your limitation—it's only your imagination.",
+          "Push yourself, because no one else is going to do it for you.",
+          "Great things never come from comfort zones.",
+          "Dream it. Wish it. Do it.",
+          "Success doesn’t just find you. You have to go out and get it.",
+          "Don’t stop when you’re tired. Stop when you’re done.",
+          "Wake up with determination. Go to bed with satisfaction.",
+          "It’s going to be hard, but hard does not mean impossible.",
+          "The key to success is to focus on goals, not obstacles.",
+          "Don’t wait for opportunity. Create it.",
+        ];
+
+        // Wait for DOM to load before adding event listener
+        window.onload = function () {
+          const refreshBtn = document.getElementById("refresh-btn");
+          refreshBtn.addEventListener("click", function () {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote-text").innerText =
+              quotes[randomIndex];
+          });
+        };
+      </script>
+
+      <div class="desp-box2">
+        <img id="memeImage" src="memes/0.jpg" alt="Funny Meme" />
+        <div class="desp-content2">
+          <h3>Random Meme Generator</h3>
+          <p>Feeling low? Here's a meme to cheer you up!</p>
+          <button onclick="generateMeme()">Get Another Meme</button>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <h2>Explore ManoMitra</h2>
+      <div class="features-container">
+        <div class="features-text">
+          <p>
+            <span>Mano Mitra</span> is your
+            <b>AI-powered mental health companion</b> designed to provide
+            personalized support and emotional guidance.
+          </p>
+          <p>
+            With tailored <b>wellness recommendations</b> and interactive
+            chatbot features, Mano Mitra ensures you are never alone in your
+            mental well-being journey.
+          </p>
+          <p>
+            Engage with our empathetic AI assistant for comforting conversations
+            whenever you need them.
+          </p>
+          <p>
+            Experience a smarter way to care for your mental health with
+            <span>Mano Mitra</span>.
+          </p>
+        </div>
+        <div class="image">
+          <img src="robo_img.png" alt="Mano Mitra Illustration" />
+        </div>
+      </div>
+    </div>
+
+    <div class="emoji-tracker">
+      <h3>Track Your Mood</h3>
+      <input type="range" min="0" max="100" value="50" id="moodSlider" />
+      <div class="emoji-display">
+        <span id="emoji">😐</span>
+      </div>
+    </div>
+
+    <!-- New Div for Personalized Links -->
+
+    <div class="recommendation-hub" id="recommendation-hub">
+      <h3>Explore Your Personalized Recommendations</h3>
+      <div id="detailed-recommendations">
+        <p>😊 Feeling Neutral? Discover something exciting above!</p>
+      </div>
+
+      <div class="recommendation-grid">
+        <div class="recommendation-section" id="food-content">
+          <h4>🍲 Food Suggestions</h4>
+          <img id="food-image" src="" alt="Food Image" />
+        </div>
+
+        <div class="recommendation-section" id="music-content">
+          <h4>🎵 Music Recommendations</h4>
+          <img id="music-image" src="" alt="Music Image" />
+        </div>
+
+        <div class="recommendation-section" id="book-content">
+          <h4>📚 Book Recommendations</h4>
+          <img id="book-image" src="" alt="Book Image" />
+        </div>
+      </div>
+      <button class="chatbot-btn" onclick="openChatBot()">
+        💬 Chat with Us
+      </button>
+    </div>
+    <!-- <div id="chat-container">
+      <div id="chatbox"></div>
+      <input type="text" id="user-input" placeholder="Type your message..." />
+      <button id="send-button" onclick="handleSendMessage()">Send</button>
+    </div> -->
+
+    <div class="dash">
+      <img src="ai_robo.png" alt="dash" />
+      <div class="desp-content">
+        <h3>Your AI DashBoard</h3>
+        <button id="refresh-btn" onclick="openDashboard()">DashBoard</button>
+      </div>
+    </div>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const username = urlParams.get("user");
+      document.getElementById(
+        "welcomeMessage"
+      ).innerText = `Welcome, ${username}!`;
+    </script>
+  </body>
+</html>

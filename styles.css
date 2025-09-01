@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('bg image.jpg') no-repeat center center/cover; 
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+  animation: floatLogo 4s ease-in-out infinite;  width: 200px;
+  height: 200px;
+}
+
+.logo {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: -100px;
+  left: 0px;
+}
+
+h1 {
+  display: none;
+}
+
+.login-box h2 {
+  color: #3b2e30;
+}
+
+.login-box p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+input, button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="password"] {
+  background-color: #eaf6ff;
+}
+
+button {
+  background-color: #433537;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #433537;
+}
+
+.signup-link {
+  margin-top: 15px;
+  color: #3b5998;
+}
+
+.signup-link a {
+  text-decoration: none;
+  color: #433537;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}

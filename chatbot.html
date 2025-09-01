@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="chatbot.css" />
+
+    <script src="chatbot.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-logo">Mano Mitra</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Survey</a></li>
+        <li><a href="#">Virtual Assistant</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+    <div id="chat-container">
+      <div id="chatbox"></div>
+      <input type="text" id="user-input" placeholder="Type your message..." />
+      <button id="send-button" onclick="handleSendMessage()">Send</button>
+      <script>
+        const textInput = document.getElementById("user-input");
+        textInput.addEventListener("keydown", function (event) {
+          if (event.key === "Enter") {
+            handleSendMessage();
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>

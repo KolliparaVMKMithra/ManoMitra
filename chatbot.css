@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    135deg,
+    #a1c4fd,
+    #c2e9fb
+  ); /* Same gradient for entire page */
+  background-attachment: fixed;
+}
+
+/* Glossy Floating Navbar */
+.navbar {
+  width: 90%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 15px 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #4caf50, #45a049);
+  /* box-shadow: 0 4px 12px rgba(0, 255, 0, 0.4);  */
+  transition: background 0.3s ease, transform 0.3s;
+}
+#chat-container {
+  width:1700px;
+  height: 700px;
+  border: 2px solid #4caf50;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  position: absolute;
+  top: 120px;
+}
+
+#chatbox {
+  height: 90%;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.bot-response {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin: 5px 0;
+}
+
+#user-input {
+  width: 1500px;
+  height: 30px;
+  padding: 8px;
+  border: 1px solid #4caf50;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 50px;
+  width: 140px;
+}

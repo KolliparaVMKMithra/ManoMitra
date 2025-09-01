@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AI Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="survey.html">Survey</a>
+      <a href="virtual_assistant.html">Virtual Assistant</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+
+    <div class="container">
+      <h1>Welcome to Your AI Dashboard</h1>
+
+      <form id="dashboard-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" value="NULL" readonly />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Enter your age" required />
+
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+          <option value="">Select</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="friend-contact">Friend's Contact (Mobile/Email):</label>
+        <input
+          type="text"
+          id="friend-contact"
+          placeholder="Enter contact details"
+          required
+        />
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div id="results">
+        <div>
+          <h3>Your Mental Health Score: <span id="mental-score"></span></h3>
+          <canvas id="mental-health-graph" width="400" height="200"></canvas>
+          <div id="recommendations"></div>
+        </div>
+
+        <button id="show-wellness-btn">View Detailed Report</button>
+      </div>
+    </div>
+    <div class="recommendations-container">
+      <div class="recommendation-card low">
+        <h3>😟 Your mental well-being needs attention!</h3>
+
+        <div class="collapsible-section">
+          <button class="collapsible-btn">🧘 Calming Yoga</button>
+          <div class="content">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/03/Savasana-2.JPG"
+              alt="Shavasana Pose"
+              onerror="handleImageError(this)"
+            />
+            <p>
+              Practice
+              <a
+                href="https://www.yogajournal.com/poses/corpse-pose"
+                target="_blank"
+                >Shavasana (Corpse Pose)</a
+              >
+              for deep relaxation.
+            </p>
+          </div>
+        </div>
+
+        <div class="collapsible-section">
+          <button class="collapsible-btn">🌾 Ayurvedic Herbs</button>
+          <div class="content">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/66/Brahmi_%28herb%29.jpg"
+              alt="Brahmi Plant"
+              onerror="handleImageError(this)"
+            />
+            <p>
+              Include
+              <a
+                href="https://www.verywellhealth.com/brahmi-benefits-5192695"
+                target="_blank"
+                >Brahmi</a
+              >
+              and
+              <a
+                href="https://pharmeasy.in/blog/ayurveda-uses-benefits-and-side-effects-of-guduchi/"
+                target="_blank"
+                >Guduchi</a
+              >
+              in your diet.
+            </p>
+          </div>
+        </div>
+
+        <div class="collapsible-section">
+          <button class="collapsible-btn">📞 Emotional Support</button>
+          <div class="content">
+            <img
+              src="https://cdn.pixabay.com/photo/2018/04/07/20/48/people-3292907_960_720.jpg"
+              alt="Emotional Support"
+              onerror="handleImageError(this)"
+            />
+            <p>Connect with loved ones or a trusted friend.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0fdf4; /* Light green tone */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #4CAF50; 
+  padding: 15px 0;
+  text-align: center;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #e0f7e0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: #4CAF50;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  outline: none;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#results {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #4CAF50;
+}
+
+#wellness-tips li {
+  background-color: #e8f5e9;
+  padding: 8px 15px;
+  margin: 5px 0;
+  border-radius: 8px;
+}
+
+canvas {
+  max-width: 100%;
+  margin: 20px 0;
+}
